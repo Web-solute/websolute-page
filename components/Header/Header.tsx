@@ -6,8 +6,10 @@ import { media } from '../../styles/theme';
 import logo from '/images/logo.png';
 
 const HeaderContainer = styled.div`
-  background: white;
+  position: sticky;
+  top: 0;
   height: 4.2rem;
+  background: white;
   box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.1);
 `;
 

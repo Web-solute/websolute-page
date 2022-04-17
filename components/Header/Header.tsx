@@ -8,7 +8,7 @@ import logo from '/images/logo.png';
 const HeaderContainer = styled.div`
   position: sticky;
   top: 0;
-  height: 4.2rem;
+  height: 4rem;
   background: white;
   box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.1);
 `;
@@ -34,9 +34,10 @@ const HeaderItemActive = styled(HeaderItem)`
 
 const LogoContainer = styled.div`
   position: absolute;
-  left: 1.5rem;
+  top: 0.5rem;
+  left: 1.8rem;
   ${media.mobile} {
-    left: 0.3rem;
+    left: 0.6rem;
   }
   cursor: pointer;
 `;

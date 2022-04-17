@@ -12,10 +12,7 @@ export const GlobalStyle = createGlobalStyle`
         display: none;
     }
     html{
-        font-size: 16px;
-        ${media.mobile}{
-            font-size: 12px;
-        }
+        font-size: 20px;
         -webkit-text-size-adjust: none;
         font-family: sans-serif;       
         font-display: fallback;
@@ -31,6 +28,9 @@ export const GlobalStyle = createGlobalStyle`
             cursor: default;
             fill: #f2f3f4;
         }
+    }
+    a {
+        text-decoration: none;
     }
     .pc-only {
         display: block;

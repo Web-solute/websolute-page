@@ -2,6 +2,7 @@ import Link from 'next/link';
 import { useRouter } from 'next/router';
 import Image from 'next/image';
 import styled from 'styled-components';
+import { media } from '../../styles/theme';
 import logo from '/images/logo.png';
 
 const HeaderContainer = styled.div`
@@ -32,6 +33,9 @@ const HeaderItemActive = styled(HeaderItem)`
 const LogoContainer = styled.div`
   position: absolute;
   left: 1.5rem;
+  ${media.mobile} {
+    left: 0.3rem;
+  }
   cursor: pointer;
 `;
 

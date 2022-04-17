@@ -31,7 +31,11 @@ class MyDocument extends Document {
       <Html>
         <Head>
           <meta charSet="utf-8" name="viewport" content="width=device-width, initial-scale=1" />
-          {/* import font */}
+          <link rel="preconnect" href="https://fonts.googleapis.com" />
+          <link
+            href="https://fonts.googleapis.com/css2?family=Poppins:wght@300&display=swap"
+            rel="stylesheet"
+          />
         </Head>
         <body>
           <Main />

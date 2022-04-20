@@ -1,9 +1,13 @@
 import Link from 'next/link';
 import { useRouter } from 'next/router';
 import Image from 'next/image';
+import { useState } from 'react';
 import styled from 'styled-components';
 import { media } from '../../styles/theme';
 import logo from '/images/logo.png';
+import hamburger from '/images/hamburger.png';
+import cancel from '/images/cancel.png';
+import MobileMenu from './MobileMenu';
 
 const HeaderContainer = styled.div`
   position: sticky;
@@ -15,7 +19,7 @@ const HeaderContainer = styled.div`
 
 const HeaderItem = styled.a`
   padding: 1rem;
-  font-size: 1.3rem;
+  font-size: 1.2rem;
   font-family: 'Poppins', sans-serif;
   color: ${(props) => props.theme.color.primary};
   &:hover {
@@ -25,11 +29,11 @@ const HeaderItem = styled.a`
 `;
 
 const HeaderItemActive = styled(HeaderItem)`
-  font-size: 1.4rem;
+  font-size: 1.3rem;
+  font-weight: bold;
   &:hover {
     color: ${(props) => props.theme.color.primary};
   }
-  text-shadow: 0.5px 0.5px #aaa;
 `;
 
 const LogoContainer = styled.div`
@@ -48,38 +52,52 @@ const ItemContainer = styled.div`
   top: 1.3rem;
 `;
 
+const HamburgerContainer = styled.div`
+  position: absolute;
+  top: 1.2rem;
+  right: 1rem;
+  cursor: pointer;
+`;
+
 export default function Header() {
   const router = useRouter();
+  const [menu, setMenu] = useState(false);
   return (
-    <HeaderContainer>
-      <LogoContainer>
-        <Link href="/">
-          <Image src={logo} alt="logo" />
-        </Link>
-      </LogoContainer>
-      <ItemContainer className="pc-only">
-        <Link href="/about">
-          {router.pathname === '/about' ? (
-            <HeaderItemActive>About</HeaderItemActive>
-          ) : (
-            <HeaderItem>About</HeaderItem>
-          )}
-        </Link>
-        <Link href="/project">
-          {router.pathname === '/project' ? (
-            <HeaderItemActive>Project</HeaderItemActive>
-          ) : (
-            <HeaderItem>Project</HeaderItem>
-          )}
-        </Link>
-        <Link href="/recruit">
-          {router.pathname === '/recruit' ? (
-            <HeaderItemActive>Recruit</HeaderItemActive>
-          ) : (
-            <HeaderItem>Recruit</HeaderItem>
-          )}
-        </Link>
-      </ItemContainer>
-    </HeaderContainer>
+    <>
+      <HeaderContainer>
+        <LogoContainer onClick={() => setMenu(false)}>
+          <Link href="/">
+            <Image src={logo} alt="logo" />
+          </Link>
+        </LogoContainer>
+        <ItemContainer className="pc-only">
+          <Link href="/about">
+            {router.pathname === '/about' ? (
+              <HeaderItemActive>About</HeaderItemActive>
+            ) : (
+              <HeaderItem>About</HeaderItem>
+            )}
+          </Link>
+          <Link href="/project">
+            {router.pathname === '/project' ? (
+              <HeaderItemActive>Project</HeaderItemActive>
+            ) : (
+              <HeaderItem>Project</HeaderItem>
+            )}
+          </Link>
+          <Link href="/recruit">
+            {router.pathname === '/recruit' ? (
+              <HeaderItemActive>Recruit</HeaderItemActive>
+            ) : (
+              <HeaderItem>Recruit</HeaderItem>
+            )}
+          </Link>
+        </ItemContainer>
+        <HamburgerContainer className="mobile-only" onClick={() => setMenu((prev) => !prev)}>
+          {menu ? <Image src={cancel} alt="cancel" /> : <Image src={hamburger} alt="hamburger" />}
+        </HamburgerContainer>
+      </HeaderContainer>
+      {menu && <MobileMenu setMenu={setMenu} />}
+    </>
   );
 }

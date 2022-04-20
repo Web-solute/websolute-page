@@ -1,10 +1,12 @@
-import Seo from '../components/Seo';
+import Head from 'next/head';
 import Animation from '../components/Home/Animation';
 
 export default function Home() {
   return (
     <>
-      <Seo title={'Home'} />
+      <Head>
+        <title>Websolute</title>
+      </Head>
       <Animation />
     </>
   );

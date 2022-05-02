@@ -4,9 +4,9 @@ import Image from 'next/image';
 import { useState } from 'react';
 import styled from 'styled-components';
 import { media } from '../../styles/theme';
-import logo from '/images/logo.png';
-import hamburger from '/images/hamburger.png';
-import cancel from '/images/cancel.png';
+import logo from '/assets/logo.png';
+import hamburger from '/assets/hamburger.png';
+import cancel from '/assets/cancel.png';
 import MobileMenu from './MobileMenu';
 
 const HeaderContainer = styled.div`

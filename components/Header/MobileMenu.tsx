@@ -1,5 +1,7 @@
 import styled from 'styled-components';
 import Link from 'next/link';
+import Github from '../../assets/github.svg';
+import Instagram from '../../assets/instagram.svg';
 
 const MobileMenuContainer = styled.div`
   position: fixed;
@@ -11,9 +13,23 @@ const MobileMenuContainer = styled.div`
 `;
 
 const MobileMenuItem = styled.div`
-  font-size: 3rem;
-  padding-top: 3rem;
-  padding-left: 2rem;
+  text-align: center;
+  font-size: 3.5rem;
+  padding-top: 4rem;
+`;
+
+const MobileMenuLink = styled.a`
+  text-decoration: none;
+  color: ${(props) => props.theme.color.primary};
+  &:hover {
+    color: ${(props) => props.theme.color.secondary};
+  }
+  cursor: pointer;
+`;
+
+const MobileMenuFooter = styled.div`
+  text-align: center;
+  margin-top: 6.5rem;
 `;
 
 export default function MobileMenu(props: { setMenu(x: boolean): void }) {
@@ -21,20 +37,27 @@ export default function MobileMenu(props: { setMenu(x: boolean): void }) {
     <MobileMenuContainer className="mobile-only">
       <MobileMenuItem>
         <Link href="/about">
-          <a onClick={() => props.setMenu(false)}>About</a>
+          <MobileMenuLink onClick={() => props.setMenu(false)}>About</MobileMenuLink>
         </Link>
       </MobileMenuItem>
       <MobileMenuItem>
         <Link href="/project">
-          <a onClick={() => props.setMenu(false)}>Project</a>
+          <MobileMenuLink onClick={() => props.setMenu(false)}>Project</MobileMenuLink>
         </Link>
       </MobileMenuItem>
       <MobileMenuItem>
         <Link href="/recruit">
-          <a onClick={() => props.setMenu(false)}>Recruit</a>
+          <MobileMenuLink onClick={() => props.setMenu(false)}>Recruit</MobileMenuLink>
         </Link>
       </MobileMenuItem>
-      <MobileMenuItem>+++</MobileMenuItem>
+      <MobileMenuFooter>
+        <a target="_blank" href="https://github.com/Web-solute">
+          <Github style={{ margin: '15px' }} />
+        </a>
+        <a target="_blank" href="https://www.instagram.com/web_solute/">
+          <Instagram style={{ margin: '15px' }} />
+        </a>
+      </MobileMenuFooter>
     </MobileMenuContainer>
   );
 }

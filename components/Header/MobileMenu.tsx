@@ -14,8 +14,8 @@ const MobileMenuContainer = styled.div`
 
 const MobileMenuItem = styled.div`
   text-align: center;
-  font-size: 3.5rem;
-  padding-top: 4rem;
+  font-size: 3.2rem;
+  padding-top: 3rem;
 `;
 
 const MobileMenuLink = styled.a`
@@ -29,7 +29,7 @@ const MobileMenuLink = styled.a`
 
 const MobileMenuFooter = styled.div`
   text-align: center;
-  margin-top: 6.5rem;
+  margin-top: 3.5rem;
 `;
 
 export default function MobileMenu(props: { setMenu(x: boolean): void }) {

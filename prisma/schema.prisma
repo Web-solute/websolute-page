@@ -1,0 +1,37 @@
+// This is your Prisma schema file,
+// learn more about it in the docs: https://pris.ly/d/prisma-schema
+
+generator client {
+  provider = "prisma-client-js"
+  previewFeatures = ["referentialIntegrity"]
+}
+
+datasource db {
+  provider             = "mysql"
+  url                  = env("DATABASE_URL")
+  referentialIntegrity = "prisma"
+}
+
+enum Position {
+  leader
+  member
+}
+
+model Member {
+  id            String   @id @default(uuid())
+  name          String
+  major         String
+  grade         Int
+  studentNumber Int
+  avatar        String?
+  joinYear      Int
+  position      Position
+  department    String
+  email         String?
+  phone         String?
+  github        String?
+  blog          String?
+  createdAt     DateTime @default(now())
+  updatedAt     DateTime @updatedAt
+}
+

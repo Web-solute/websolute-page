@@ -1,5 +1,6 @@
 import Head from 'next/head';
-import Animation from '../components/Home/Animation';
+import HomeAnimation from '../components/Home/HomeAnimation';
+import HomeMain from '../components/Home/HomeMain';
 
 export default function Home() {
   return (
@@ -7,7 +8,8 @@ export default function Home() {
       <Head>
         <title>Websolute</title>
       </Head>
-      <Animation />
+      <HomeAnimation />
+      <HomeMain />
     </>
   );
 }

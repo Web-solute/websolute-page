@@ -1,9 +1,9 @@
-import Seo from '../components/Seo';
+import Helmet from '../components/Helmet';
 
 export default function Project() {
   return (
     <>
-      <Seo title={'Project'} />
+      <Helmet title={'Project'} />
       Project
     </>
   );

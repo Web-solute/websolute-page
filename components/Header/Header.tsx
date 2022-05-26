@@ -19,21 +19,19 @@ const HeaderContainer = styled.div`
 
 const HeaderItem = styled.a`
   padding: 1rem;
-  font-size: 1.2rem;
+  font-size: 1.3rem;
   font-family: 'Poppins', sans-serif;
   color: ${(props) => props.theme.color.primary};
+  transition: all 0.5s;
   &:hover {
-    color: ${(props) => props.theme.color.subPrimary};
+    color: ${(props) => props.theme.color.secondary};
+    opacity: 0.9;
   }
   cursor: pointer;
 `;
 
 const HeaderItemActive = styled(HeaderItem)`
-  font-size: 1.3rem;
-  font-weight: bold;
-  &:hover {
-    color: ${(props) => props.theme.color.primary};
-  }
+  color: ${(props) => props.theme.color.secondary};
 `;
 
 const LogoContainer = styled.div`

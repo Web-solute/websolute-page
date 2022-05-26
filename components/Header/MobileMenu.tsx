@@ -19,8 +19,8 @@ const MobileMenuItem = styled.div`
 `;
 
 const MobileMenuLink = styled.a`
-  text-decoration: none;
   color: ${(props) => props.theme.color.primary};
+  transition: all 0.2s;
   &:hover {
     color: ${(props) => props.theme.color.secondary};
   }

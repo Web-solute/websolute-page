@@ -1,9 +1,9 @@
-import Seo from '../components/Seo';
+import Helmet from '../components/Helmet';
 
 export default function Admin() {
   return (
     <>
-      <Seo title={'Admin'} />
+      <Helmet title={'Admin'} />
       Admin
     </>
   );

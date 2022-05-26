@@ -16,7 +16,6 @@ const LogoText = styled.div`
   color: transparent;
   -webkit-background-clip: text;
   background-clip: text;
-  font-family: 'Courgette', cursive;
   font-family: 'Poppins', sans-serif;
   font-weight: bold;
   margin-top: 6rem;

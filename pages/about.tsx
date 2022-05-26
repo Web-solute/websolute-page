@@ -1,9 +1,9 @@
-import Seo from '../components/Seo';
+import Helmet from '../components/Helmet';
 
 export default function About() {
   return (
     <>
-      <Seo title={'About'} />
+      <Helmet title={'About'} />
       About
     </>
   );

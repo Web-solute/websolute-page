@@ -1,9 +1,9 @@
-import Seo from '../components/Seo';
+import Helmet from '../components/Helmet';
 
 export default function Recruit() {
   return (
     <>
-      <Seo title={'Recruit'} />
+      <Helmet title={'Recruit'} />
       Recruit
     </>
   );

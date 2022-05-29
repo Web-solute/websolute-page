@@ -23,7 +23,7 @@ export default function Header() {
       <HeaderContainer>
         <LogoContainer onClick={() => setMenu(false)}>
           <Link href="/">
-            <Image src={logo} alt="logo" />
+            <Image src={logo} alt="logo" height={50} width={50} />
           </Link>
         </LogoContainer>
         <ItemContainer className="pc-only">

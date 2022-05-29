@@ -2,7 +2,7 @@ import styled from 'styled-components';
 import { media } from '../../styles/theme';
 
 export const AnimationContainer = styled.div`
-  height: calc(100vh - 4rem);
+  height: calc(100vh - 3rem);
 `;
 
 export const LogoText = styled.div`
@@ -18,7 +18,7 @@ export const LogoText = styled.div`
   background-clip: text;
   font-family: 'Poppins', sans-serif;
   font-weight: bold;
-  margin-top: 6rem;
+  padding-top: 5rem;
   margin-left: 15%;
   ${media.mobile} {
     text-align: center;

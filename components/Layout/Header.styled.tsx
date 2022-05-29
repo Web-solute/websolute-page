@@ -4,14 +4,14 @@ import { media } from '../../styles/theme';
 export const HeaderContainer = styled.div`
   position: sticky;
   top: 0;
-  height: 4rem;
+  height: 3rem;
   background: white;
   box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.1);
 `;
 
 export const HeaderItem = styled.a`
   padding: 1rem;
-  font-size: 1.3rem;
+  font-size: 1.2rem;
   font-family: 'Poppins', sans-serif;
   color: ${(props) => props.theme.color.primary};
   transition: all 0.5s;
@@ -28,8 +28,8 @@ export const HeaderItemActive = styled(HeaderItem)`
 
 export const LogoContainer = styled.div`
   position: absolute;
-  top: 0.5rem;
-  left: 1.8rem;
+  top: 0.3rem;
+  left: 3.2rem;
   ${media.mobile} {
     left: 0.6rem;
   }
@@ -38,13 +38,13 @@ export const LogoContainer = styled.div`
 
 export const ItemContainer = styled.div`
   position: absolute;
-  right: 1.5rem;
-  top: 1.3rem;
+  right: 2.4rem;
+  top: 0.8rem;
 `;
 
 export const HamburgerContainer = styled.div`
   position: absolute;
-  top: 1.2rem;
+  top: 0.8rem;
   right: 1rem;
   cursor: pointer;
 `;

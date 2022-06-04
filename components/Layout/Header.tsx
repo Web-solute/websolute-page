@@ -21,7 +21,7 @@ export default function Header() {
   return (
     <>
       <HeaderContainer>
-        <LogoContainer onClick={() => setMenu(false)}>
+        <LogoContainer className="link" onClick={() => setMenu(false)}>
           <Link href="/">
             <Image src={logo} alt="logo" height={50} width={50} />
           </Link>
@@ -49,7 +49,7 @@ export default function Header() {
             )}
           </Link>
         </ItemContainer>
-        <HamburgerContainer className="mobile-only" onClick={() => setMenu((prev) => !prev)}>
+        <HamburgerContainer className="mobile-only link" onClick={() => setMenu((prev) => !prev)}>
           {menu ? <Image src={cancel} alt="cancel" /> : <Image src={hamburger} alt="hamburger" />}
         </HamburgerContainer>
       </HeaderContainer>

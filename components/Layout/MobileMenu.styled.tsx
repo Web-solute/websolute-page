@@ -2,8 +2,8 @@ import styled from 'styled-components';
 
 export const MobileMenuContainer = styled.div`
   position: fixed;
-  top: 4rem;
-  height: calc(100vh - 4rem);
+  top: 3rem;
+  height: calc(100vh - 3rem);
   width: 100%;
   background: white;
   opacity: 0.9;

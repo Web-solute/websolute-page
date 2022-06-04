@@ -12,6 +12,7 @@
     "@prisma/client": "^3.13.0",
     "next": "12.1.4",
     "react": "18.0.0",
+    "react-animated-cursor": "^2.5.1",
     "react-dom": "18.0.0",
     "styled-component": "^2.8.0",
     "styled-reset": "^4.3.4",

@@ -21,8 +21,9 @@ export const LogoText = styled.div`
   padding-top: 8.5rem;
   margin-left: 15%;
   ${media.mobile} {
+    font-size: 3rem;
     text-align: center;
-    padding-top: 6rem;
+    padding-top: 5rem;
     margin-left: 0%;
   }
 `;
@@ -30,12 +31,13 @@ export const LogoText = styled.div`
 export const CarouselContainer = styled.div`
   color: ${(props) => props.theme.color.secondary};
   font-family: 'Poppins', sans-serif;
-  font-size: clamp(1.8rem, 3vw, 3rem);
+  font-size: clamp(1.5rem, 3vw, 3rem);
   padding-top: 8rem;
   margin-left: 30%;
   display: inline-flex;
   align-items: center;
   ${media.mobile} {
+    padding-top: 7rem;
     margin-left: 0%;
     display: flex;
     flex-direction: column;
@@ -53,7 +55,7 @@ const slideUp = keyframes`
 
 export const CarouselRotator = styled.div`
   font-weight: bold;
-  font-size: clamp(2.5rem, 5vw, 4rem);
+  font-size: clamp(2rem, 5vw, 4rem);
   border-bottom: solid 3.5px ${(props) => props.theme.color.secondary};
   display: inline-block;
   margin: auto;
